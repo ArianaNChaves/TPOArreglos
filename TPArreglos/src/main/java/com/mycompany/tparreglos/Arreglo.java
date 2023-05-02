@@ -1,48 +1,48 @@
 package com.mycompany.tparreglos;
 
 public class Arreglo {
-
-    public Arreglo() {
-    }
-    public static void sumarLista(int[] arregloUnidimensional){
+    
+    public static void sumarLista(int[] lista) {
         int suma = 0;
-        for (int i = 0; i < arregloUnidimensional.length; i++){
-            suma += arregloUnidimensional[i];
+        double promedio;
+        for(int i=0; i<lista.length; i++) {
+            suma += lista[i];
         }
-        System.out.println("La suma del arreglo es: " + suma);
-        System.out.println("El promedio del arreglo es: " + suma / arregloUnidimensional.length);
+        promedio = (double) suma / lista.length;
+        System.out.println("La suma de los elementos es: " + suma);
+        System.out.println("El promedio de los elementos es: " + promedio);
     }
-    public static int buscarMayor(int[][] arregloBidimensional){
-        int mayor = 0;
-        for (int i = 0; i < arregloBidimensional.length; i++) {
-
-            for (int j = 0; j < arregloBidimensional[i].length; j++) {
-
-                if (arregloBidimensional[i][j] > mayor) {
-                    mayor = arregloBidimensional[i][j];
+    
+    public static int buscarMayor(int[][] arreglo) {
+        int mayor = arreglo[0][0];
+        for(int i=0; i<arreglo.length; i++) {
+            for(int j=0; j<arreglo[i].length; j++) {
+                if(arreglo[i][j] > mayor) {
+                    mayor = arreglo[i][j];
                 }
             }
         }
         return mayor;
     }
-    public static int cuentaVocales(String cadena){
-        int cantidadDeVocales = 0;
-        for (int i = 0; i < cadena.length(); i++) {
-            char letra = cadena.charAt(i);
-            if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u' || letra == 'A' || letra == 'E' || letra == 'I' || letra == 'O' || letra == 'U') {
-                cantidadDeVocales++;
+    
+    public static int cuentaVocales(String cadena) {
+        int cuenta = 0;
+        String vocales = "aeiouAEIOU";
+        for(int i=0; i<cadena.length(); i++) {
+            if(vocales.indexOf(cadena.charAt(i)) != -1) {
+                cuenta++;
             }
         }
-        return cantidadDeVocales;
+        return cuenta;
     }
-    public static int cuentaCaracter(String cadena, char caracter){
-        int vecesQueAparecioElCaracter = 0;
-        for (int i = 0; i < cadena.length(); i++) {
-            char letra = cadena.charAt(i);
-            if (letra == caracter) {
-                vecesQueAparecioElCaracter++;
+    
+    public static int cuentaCaracter(String cadena, char caracter) {
+        int cuenta = 0;
+        for(int i=0; i<cadena.length(); i++) {
+            if(cadena.charAt(i) == caracter) {
+                cuenta++;
             }
         }
-        return vecesQueAparecioElCaracter;
+        return cuenta;
     }
 }

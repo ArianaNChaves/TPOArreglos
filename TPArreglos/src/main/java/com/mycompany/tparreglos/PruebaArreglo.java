@@ -1,19 +1,24 @@
 package com.mycompany.tparreglos;
 
 public class PruebaArreglo {
+
     public static void main(String[] args) {
-        int[] arregloDeEnteros = {1, 2, 3, 4, 5, 6, 7, 8, 10};
-         
-        int[][] arregloDeEnteros2 = {{12, 31}, {1, 3, 5}};
-        String vocales = "Texto de ejemplo";
 
-        Arreglo.sumarLista(arregloDeEnteros);
+        int[] lista = {2, 4, 6, 8, 10};
+        Arreglo.sumarLista(lista);
 
-        System.out.println("El mayor numero del arreglo es " + Arreglo.buscarMayor(arregloDeEnteros2));
+        int[][] arreglo = {{1, 2, 3}, {4, 5}, {6, 7, 8, 9}};
+        int mayor = Arreglo.buscarMayor(arreglo);
+        System.out.println("El entero más grande es: " + mayor);
 
-        System.out.println("El string " + vocales + " tiene " + Arreglo.cuentaVocales(vocales) + " vocales");
+        String cadena = "Hola mundo!";
+        int cuentaVocales = Arreglo.cuentaVocales(cadena);
+        System.out.println("La cantidad de vocales es: " + cuentaVocales);
 
-        System.out.println("El string " + vocales + " tiene " + Arreglo.cuentaCaracter(vocales, 'r') + " veces el caracter r");
+        String cadena2 = "abracadabra";
+        char caracter = 'a';
+        int cuentaCaracter = Arreglo.cuentaCaracter(cadena2, caracter);
+        System.out.println("La cantidad de veces que se repite el caracter " + caracter + " en la cadena es: " + cuentaCaracter);
     }
-    
+
 }
