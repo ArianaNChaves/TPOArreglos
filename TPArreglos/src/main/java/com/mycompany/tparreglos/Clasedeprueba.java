@@ -10,5 +10,7 @@ package com.mycompany.tparreglos;
  * @author Mauro
  */
 public class Clasedeprueba {
-    
+    public void holaMundo(){
+        System.out.println("Hola mundo");
+    }
 }
