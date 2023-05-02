@@ -16,4 +16,5 @@ public class PruebaArreglo {
         System.out.println("El string " + vocales + " tiene " + Arreglo.cuentaCaracter(vocales, 'r') + " veces el caracter r");
     }
     //Prueba2
+    //xd
 }
